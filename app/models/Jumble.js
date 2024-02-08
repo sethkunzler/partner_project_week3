@@ -10,7 +10,20 @@ export class Jumble {
     this.startTime = null
     this.endTime = null
   }
-  get ListTemplate() { // a basic list template to get drawing
-    return `<li>${this.name}</li>`
+  get ListHTMLTemplate() {
+    return `
+    <p onclick="app.JumblesController." class="fs-5 p-2 selectable" role="button">${this.name}</p>
+    `
+  }
+
+  get ActiveHTMLTemplate() {
+    return`
+    <div class="d-flex justify-content-between px-4">
+      <h2>${this.name}</h2>
+      <h2>${this.fastestTime}</h2>
+    </div>
+    <p>${this.body}
+    </p>
+    `
   }
 }
