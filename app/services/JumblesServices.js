@@ -11,6 +11,6 @@ selectActiveJumble(jumbleId){
   const foundJumble = AppState.jumbles.find(Jumble => Jumble.id == jumbleId)
   AppState.activeJumble = foundJumble
 }
-
+}
 
 export const jumblesServices = new JumblesServices

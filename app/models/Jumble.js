@@ -12,7 +12,8 @@ export class Jumble {
   }
   get ListHTMLTemplate() {
     return `
-    <p onclick="app.JumblesController." class="fs-5 p-2 selectable" role="button">${this.name}</p>
+    <p onclick="app.JumblesController.selectActiveJumble('${this.id
+    }')" class="fs-5 p-2 selectable" role="button">${this.name}</p>
     `
   }
 
